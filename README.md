@@ -1,4 +1,5 @@
 
+      Repositório criado com a finalidade de armazenar trabalhos/exercicios propostos pelo curso acadêmico.
 
 # Storage
 
