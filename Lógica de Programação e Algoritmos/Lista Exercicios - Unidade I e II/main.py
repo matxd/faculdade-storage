@@ -1,5 +1,8 @@
 # I. Conceitos Básicos
 # - A)
+from re import A
+
+
 mostrarDobro = 7 * 2
 print(mostrarDobro)
 
@@ -16,3 +19,25 @@ print(idadeEmAnos * 365, "dias")
 salarioBruto = 1500
 totalVendas = 1000
 print(salarioBruto + ((totalVendas * 15) / 100))
+
+# II.Tipos de dados e Variáveis
+# 1)
+horasTrabalhadas = 40
+valorHoraTrabalhada = 10
+salBruto = (valorHoraTrabalhada * horasTrabalhadas)
+descontoImposto = (salBruto - (salBruto * 18) / 100)
+print("O salario bruto é","R$" + str(salBruto), "e o liquido é","R$" + str(descontoImposto))
+
+# 2)
+KmPercorridos = 20
+litrosParaCompletar = 50
+consumoPorKm = (KmPercorridos / litrosParaCompletar)
+print(consumoPorKm)
+
+# 3)
+a = 777
+b = 888
+temp = a
+a = b
+b = temp
+print("A:",a,"B:",b)
