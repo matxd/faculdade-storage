@@ -1,8 +1,5 @@
 # I. Conceitos Básicos
 # - A)
-from re import A
-
-
 mostrarDobro = 7 * 2
 print(mostrarDobro)
 
