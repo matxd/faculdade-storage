@@ -2,7 +2,7 @@
 def cadastrarContato(arrayContatos):
 
   def existeContato(arrayContatos, telefone): # Função criada pra verificar se o telefone cadastrado é repetido
-    if len(arrayContatos) > 0:
+    if len(arrayContatos) > 0: # Verifica se o array não está vazio
       for contato in arrayContatos:
         if contato["telefone"] == telefone:
           return True
@@ -15,7 +15,7 @@ def cadastrarContato(arrayContatos):
     else:
       print("Este telefone já foi cadastrado.\n")
   
-  contatoDicionario = {
+  contatoDicionario = { # Dicionario base pra manipulação dos dados
     "nome": input("Digite o nome do contato: "),
     "telefone": telefone,
     "email": input("Digite o e-mail do contato: "),
@@ -28,12 +28,13 @@ def cadastrarContato(arrayContatos):
 
 # Função responsavel por alterar o contato, sendo chamada quando o usuario escolhe a opção 2 na função menu
 def consultarContato(arrayContatos):
-  if len(arrayContatos) > 0:
+  if len(arrayContatos) > 0: # Verifica se o array não está vazio
     nome = input("Digite o nome do contato a ser consultado: ")
-    for contato in arrayContatos:
+    for contato in arrayContatos: # Percorre todo o array de contatos e retorna o valor pedido na condicional abaixo
       if contato["nome"] == nome:
         print("Nome: " + contato["nome"], "Telefone: " + contato["telefone"], "E-mail: " + contato["email"], "Twitter: " + contato["twitter"], "Instagram: " + contato["instagram"])
         print("==========\n")
+        break
       else:
         print("Não existe contato cadastrado com este nome.\n")
   else:
@@ -41,26 +42,41 @@ def consultarContato(arrayContatos):
 
 # Função responsavel por alterar o contato, sendo chamada quando o usuario escolhe a opção 3 na função menu
 def removerContato(arrayContatos):
-  if len(arrayContatos) > 0:
+  if len(arrayContatos) > 0: # Verifica se o array não está vazio
     nome = input("Digite o nome do contato a ser removido: ")
-    for i, contato in enumerate(arrayContatos):
+    for i, contato in enumerate(arrayContatos): # Percorre todo o array de contatos e retorna o valor pedido na condicional abaixo
       if contato["nome"] == nome:
         print("Contato excluido com sucesso.")
         arrayContatos.pop(i)
         print("==========\n")
+        break
       else:
-        print("Não existe contato cadastrado com este Nome.\n")
+        print("Não existe contato cadastrado com este nome.\n")
   else:
     print("No momento não temos contatos cadastrados.\n")
 
 # Função responsavel por alterar o contato, sendo chamada quando o usuario escolhe a opção 4 na função menu
-def alterarContato():
-  pass
+def alterarContato(arrayContatos):
+  if len(arrayContatos) > 0: # Verifica se o array não está vazio
+    nome = input("Digite o nome do contato a ser alterado: ")
+    for contato in arrayContatos: # Percorre todo o array de contatos e retorna o valor pedido na condicional abaixo
+      if contato["nome"] == nome:
+        print("Nome: " + contato["nome"], "Telefone: " + contato["telefone"], "E-mail: " + contato["email"], "Twitter: " + contato["twitter"], "Instagram: " + contato["instagram"])
+        print("==========\n")
+        contato["telefone"] = input("Informe o novo telefone: ")
+        contato["email"] = input("Informe o novo email: ")
+        contato["twitter"] = input("Informe o novo twitter: ")
+        contato["instagram"] = input("Informe o novo instagram: ")
+        break
+      else:
+        print("Não existe contato cadastrado com este nome.\n")
+  else:
+    print("No momento não temos contatos cadastrados.\n")
 
 # Função responsavel por listar todos os contato, sendo chamada quando o usuario escolhe a opção 5 na função menu
 def listarContatos(arrayContatos):
-  if len(arrayContatos) > 0:
-    for i, contato in enumerate(arrayContatos):
+  if len(arrayContatos) > 0: # Verifica se o array não está vazio
+    for i, contato in enumerate(arrayContatos): # Percorre todo o array de contatos e retorna o valor pedido na condicional abaixo
       print("Nro {}:".format(i+1))
       print("\tNome: " + contato["nome"], "\tTelefone: " + contato["telefone"], "\tE-mail: " + contato["email"], "\tTwitter: " + contato["twitter"], "\tInstagram: " + contato["instagram"])
       print("==========")
@@ -71,7 +87,7 @@ def listarContatos(arrayContatos):
 def menu():
   arrayContatos = [] # Array criado para armazenar todos os contatos cadastrados
 
-  while True:
+  while True: # Menu do programa fica em execução até a opção 0 for escolhida
     print("Seja bem vindo a sua Agenda-Telefônica, digite um dos números abaixo: \n 1- Inserir novo contato \n 2- Fazer consulta por nome \n 3- Remover contato cadastrado \n 4- Alterar contato cadastrado \n 5- Listar todos os contatos cadastrados \n 0- Finalizar")
     menuOpcao = int(input("Aguardando escolha: "))
     if menuOpcao == 1:
@@ -81,7 +97,7 @@ def menu():
     elif menuOpcao == 3:
       removerContato(arrayContatos)
     elif menuOpcao == 4:
-      alterarContato()
+      alterarContato(arrayContatos)
     elif menuOpcao == 5:
       listarContatos(arrayContatos)
     elif menuOpcao == 0:
@@ -90,4 +106,4 @@ def menu():
     else:
       print("Digite um número válido.\n")
 
-menu()
+menu() # Chamando a função main do programa
