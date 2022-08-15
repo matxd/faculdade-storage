@@ -38,3 +38,9 @@ temp = a
 a = b
 b = temp
 print("A:",a,"B:",b)
+
+# 5)
+def media():
+  numeroUm = int(input("Digite um número: "))
+  numeroDois = int(input("Digite outro número: "))
+  print((numeroUm + numeroDois) / 2)
