@@ -45,6 +45,16 @@ def media():
   numeroDois = int(input("Digite outro número: "))
   print((numeroUm + numeroDois) / 2)
 
+# 6)
 def saudacao():
   nome = input("Digite seu nome: ")
   print("Olá", nome + ", seja bem-vindo! //", "Seu nome tem " + str(len(nome)) + " letras.")
+
+# 7 e 8)
+def condicional():
+  numero = int(input("Informe um número: "))
+  if numero % 7 == 0:
+    print("É multiplo")
+  
+  if numero > 20:
+    print(numero / 2)
