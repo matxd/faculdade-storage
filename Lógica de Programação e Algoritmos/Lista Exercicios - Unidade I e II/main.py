@@ -44,3 +44,7 @@ def media():
   numeroUm = int(input("Digite um número: "))
   numeroDois = int(input("Digite outro número: "))
   print((numeroUm + numeroDois) / 2)
+
+def saudacao():
+  nome = input("Digite seu nome: ")
+  print("Olá", nome + ", seja bem-vindo! //", "Seu nome tem " + str(len(nome)) + " letras.")
