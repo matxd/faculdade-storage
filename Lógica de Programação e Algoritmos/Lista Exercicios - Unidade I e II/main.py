@@ -77,3 +77,16 @@ def validarCPF():
     print("CPF válido.")
   else:
     print("CPF inválido, contém mais de 11 dígitos.")
+
+# 11)
+def salarioOperario():
+  horasTrabalhadas = int(input("Informe a quantidade de horas trabalhadas: "))
+
+  if(horasTrabalhadas > 50):
+    salarioTotal = 50 * 10
+    pagamentoHoraExtra = (horasTrabalhadas - 50) * 20 + salarioTotal
+    print("O seu salário final é de:", pagamentoHoraExtra)
+  else:
+    salarioTotal = horasTrabalhadas * 10
+    pagamentoHoraExtra = 0
+    print("O seu salário final é de:", salarioTotal)
