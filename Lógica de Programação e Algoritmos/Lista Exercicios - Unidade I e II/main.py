@@ -68,3 +68,12 @@ def emprestimo():
     print("Empréstimo não pode ser concedido.")
   else:
     print("Empréstimo pode ser concedido.")
+
+# 10)
+def validarCPF():
+  cpf = input("Informe o CPF a ser verificado: ")
+
+  if(len(cpf) <= 11):
+    print("CPF válido.")
+  else:
+    print("CPF inválido, contém mais de 11 dígitos.")
