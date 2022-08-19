@@ -58,3 +58,13 @@ def condicional():
   
   if numero > 20:
     print(numero / 2)
+
+# 9)
+def emprestimo():
+  salario = int(input("Informe seu salário: "))
+  valorPrestacao = int(input("Informe o valor da prestação do emprestimo: "))
+
+  if(valorPrestacao > ((salario * 20) / 100)):
+    print("Empréstimo não pode ser concedido.")
+  else:
+    print("Empréstimo pode ser concedido.")
