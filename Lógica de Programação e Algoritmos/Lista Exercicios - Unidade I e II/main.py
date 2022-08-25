@@ -39,6 +39,7 @@ a = b
 b = temp
 print("A:",a,"B:",b)
 
+# III. Entrada e Saida
 # 5)
 def media():
   numeroUm = int(input("Digite um número: "))
@@ -50,6 +51,7 @@ def saudacao():
   nome = input("Digite seu nome: ")
   print("Olá", nome + ", seja bem-vindo! //", "Seu nome tem " + str(len(nome)) + " letras.")
 
+# IV. Condicional IF
 # 7 e 8)
 def condicional():
   numero = int(input("Informe um número: "))
@@ -91,12 +93,13 @@ def salarioOperario():
     pagamentoHoraExtra = 0
     print("O seu salário final é de:", salarioTotal)
   
+# V. Condicional IF (Estrutura Aninhada)
 # 12)
 def calculadora():
   numeroUm = int(input("Digite um número: "))
   numeroDois = int(input("Digite outro número: "))
   operador = input("Digite um operador aritmético, Ex: -, +, * ou / ")
-  
+
   if(operador == "+"):
     print(numeroUm + numeroDois)
   elif(operador == "-"):
