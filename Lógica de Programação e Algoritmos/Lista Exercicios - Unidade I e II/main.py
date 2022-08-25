@@ -90,3 +90,18 @@ def salarioOperario():
     salarioTotal = horasTrabalhadas * 10
     pagamentoHoraExtra = 0
     print("O seu salário final é de:", salarioTotal)
+  
+# 12)
+def calculadora():
+  numeroUm = int(input("Digite um número: "))
+  numeroDois = int(input("Digite outro número: "))
+  operador = input("Digite um operador aritmético, Ex: -, +, * ou / ")
+  
+  if(operador == "+"):
+    print(numeroUm + numeroDois)
+  elif(operador == "-"):
+    print(numeroUm - numeroDois)
+  elif(operador == "*"):
+    print(numeroUm * numeroDois)
+  elif(operador == "/"):
+    print(numeroUm / numeroDois)
