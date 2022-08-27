@@ -118,3 +118,15 @@ def classeEleitoral():
     print("Eleitor obrigatório")
   elif(idade >= 16 and idade < 18 or idade > 65):
     print("Eleitor facultativo")
+
+# 14)
+def siglaEstado():
+  userEstado = input("Digite a sigla do seu Estado: ").upper()
+  if(userEstado == "RJ"):
+    print("Carioca")
+  elif(userEstado == "SP"):
+    print("Paulista")
+  elif(userEstado == "MG"):
+    print("Mineiro")
+  else:
+    print("Outros estados")
