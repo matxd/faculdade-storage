@@ -138,3 +138,12 @@ def precoFruta():
     print(frutasQts * 0.30)
   elif(frutasQts >= 12):
     print(frutasQts * 0.25)
+
+# 16)
+def triangulo(a, b, c):
+  if(a == b and b == c):
+    print("Triângulo Equilátero")
+  elif(a == b or b == c or c == a):
+    print("Triângulo Isósceles")
+  else:
+    print("Triângulo Escaleno")
