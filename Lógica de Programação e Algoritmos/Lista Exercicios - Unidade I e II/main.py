@@ -130,3 +130,11 @@ def siglaEstado():
     print("Mineiro")
   else:
     print("Outros estados")
+
+# 15)
+def precoFruta():
+  frutasQts = int(input("Digite a quantidade de Maçãs compradas: "))
+  if(frutasQts < 12):
+    print(frutasQts * 0.30)
+  elif(frutasQts >= 12):
+    print(frutasQts * 0.25)
