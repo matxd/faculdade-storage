@@ -147,3 +147,18 @@ def triangulo(a, b, c):
     print("Triângulo Isósceles")
   else:
     print("Triângulo Escaleno")
+
+# 17)
+def sistemaEscolar(nome, nota1, nota2, nota3, nota4):
+  media = (nota1 + nota2 + nota3 + nota4) / 4
+  if(media >= 6):
+    print(nome + ", você está aprovado")
+  elif(media < 5):
+    print(nome + ", você está automaticamente reprovado")
+  elif(media < 6 and media > 5):
+    exameFinal = float(input("Informe a nota do seu Exame Final: "))
+    mediaFinal = (media + exameFinal) / 2
+    if(mediaFinal >= 6):
+      print(nome + ", você está aprovado")
+    else:
+      print(nome + ", você está reprovado")
